@@ -1,11 +1,15 @@
 import AddNumber from '../components/AddNumber';
-import React, { Component } from 'react';
-import store from '../store';
+import { connect } from 'react-redux';
 
-export default class ANC extends Component {
-  render() {
-    return <AddNumber onClick={function(size) {
-      store.dispatch({type: 'INCREMENT', size: size})
-    }}></AddNumber>
-  }
-}
+export default connect()(AddNumber);
+
+// import React, { Component } from 'react';
+// import store from '../store';
+
+// export default class ANC extends Component {
+//   render() {
+//     return <AddNumber onClick={function(size) {
+//       store.dispatch({type: 'INCREMENT', size: size})
+//     }}></AddNumber>
+//   }
+// }
